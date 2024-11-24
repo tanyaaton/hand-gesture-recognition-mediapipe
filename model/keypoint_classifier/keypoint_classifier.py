@@ -7,10 +7,10 @@ import tensorflow as tf
 class KeyPointClassifier(object):
     def __init__(
         self,
-        model_path='model/keypoint_classifier/keypoint_classifier.tflite',
+        model_path='model/keypoint_classifier/keypoint_classifier.tflite',      # model used for classification
         num_threads=1,
     ):
-        self.interpreter = tf.lite.Interpreter(model_path=model_path,
+        self.interpreter = tf.lite.Interpreter(model_path=model_path,           # running the TFlite model
                                                num_threads=num_threads)
 
         self.interpreter.allocate_tensors()
